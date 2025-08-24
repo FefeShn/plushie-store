@@ -2,7 +2,7 @@
 // footer.php
 ?>
     </main>
-    <footer class="main-footer">
+    <footer class="footer">
         <p>&copy; <?php echo date('Y'); ?> Plushie Store - Sistema de Gerenciamento</p>
     </footer>
 </body>

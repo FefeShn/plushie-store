@@ -1,5 +1,4 @@
 <?php
-    // Configurações de conexão com o banco de dados
     $host = 'localhost';
     $db   = 'plushie_store';
     $user = 'root';

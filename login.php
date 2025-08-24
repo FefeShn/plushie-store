@@ -10,17 +10,17 @@ if (isLoggedIn()) {
 
 $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username'] ?? '');
+    $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
-    
-    if (empty($username) || empty($password)) {
+
+    if (empty($email) || empty($password)) {
         $error = 'Por favor, preencha todos os campos';
     } else {
-        if (login($username, $password)) {
+        if (login($email, $password)) {
             header('Location: index.php');
             exit();
         } else {
-            $error = 'Usuário ou senha incorretos';
+            $error = 'E-mail ou senha incorretos';
         }
     }
 }
@@ -56,20 +56,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
             
             <form action="login.php" method="POST" class="login-form">
+                
+                
                 <div class="form-group">
-                    <label for="username">
-                        <i class="fas fa-user"></i> Usuário
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> E-mail
                     </label>
                     <input 
-                        type="text" 
-                        id="username" 
-                        name="username" 
+                        type="email" 
+                        id="email" 
+                        name="email" 
                         required
-                        placeholder="Digite seu usuário"
-                        value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : ''; ?>"
+                        placeholder="Digite seu e-mail"
+                        value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>"
                     >
                 </div>
-                
+
                 <div class="form-group">
                     <label for="password">
                         <i class="fas fa-lock"></i> Senha
