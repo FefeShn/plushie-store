@@ -27,21 +27,8 @@ $result = $mysqli->query($query);
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <div class="logo-icon">🧸</div>
-            <h1>Plushie Store</h1>
-        </div>
-        <nav class="main-nav">
-            <a href="index.php" class="nav-link active">Início</a>
-            <a href="produtos/index.php" class="nav-link">Produtos</a>
-            <a href="categorias/index.php" class="nav-link">Categorias</a>
-        </nav>
-        <div class="user-info">
-            <span>Olá, <strong><?php echo $_SESSION['nome']; ?></strong></span>
-            <a href="logout.php" class="btn btn-primary">Sair</a>
-        </div>
-    </header>
+    <?php include 'includes/navbar.php'; ?>
+
 
     <div class="container">
         <div class="page-title">
