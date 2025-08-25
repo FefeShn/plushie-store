@@ -9,11 +9,11 @@ if (!isLoggedIn()) {
 }
 
 // Buscar produtos do banco de dados
-$query = "SELECT p.*, c.nome_categoria as categoria 
-          FROM produtos p 
-          LEFT JOIN categorias c ON p.categoria_id = c.id 
-          ORDER BY p.id DESC 
-          LIMIT 14";
+$query = "SELECT p.*, c.nome_categoria 
+            FROM produtos p 
+            LEFT JOIN categorias c ON p.categoria_id = c.id 
+            ORDER BY p.id DESC 
+            LIMIT 14";
 
 $result = $mysqli->query($query);
 ?>
@@ -87,9 +87,10 @@ if (!$result) {
                             <p class="plushie-description"><?php echo htmlspecialchars($produto['descricao']); ?></p>
                             <div class="plushie-price">R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?></div>
                             <div class="plushie-actions">
-                                <span class="<?php echo $produto['disponibilidade'] == 'disponivel' ? 'available' : 'unavailable'; ?>">
+                                <span class="<?php echo $produto['disponibilidade'] == 'disponível' ? 'available' : 'unavailable'; ?>">
                                     <?php echo $produto['disponibilidade'] == 'disponível' ? 'Disponível' : 'Indisponível'; ?>
                                 </span>
+
                                 <a href="produtos/editar.php?id=<?php echo $produto['id']; ?>" class="btn btn-primary">Editar</a>
                             </div>
                         </div>

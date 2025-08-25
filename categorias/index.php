@@ -32,7 +32,7 @@ if (!$result) {
             <a href="criar.php" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nova Categoria</a>
             
             <?php if ($result->num_rows > 0): ?>
-                <div class="table-responsive">
+                <div class="table-responsiva">
                     <table>
                         <thead>
                             <tr>

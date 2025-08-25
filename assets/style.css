@@ -712,7 +712,6 @@ table tr:hover {
     width: auto;
 }
 
-/* Footer */
 .footer {
     text-align: center;
     padding: 2rem;
@@ -828,14 +827,12 @@ table tr:hover {
     }
 }
 
-/* Melhorias de acessibilidade */
 .btn:focus,
 a:focus {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
 
-/* Animações suaves */
 table tr,
 .btn,
 .empty-state {
@@ -895,7 +892,6 @@ form button:hover {
     color: #333;
 }
 
-/* Alertas de sucesso/erro */
 .alert {
     max-width: 400px;
     margin: 20px auto;
@@ -913,4 +909,27 @@ form button:hover {
 .alert-success {
     background-color: #d1e7dd;
     color: #0f5132;
+}
+
+.produto-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;   
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    display: block;
+    margin: auto;
+}
+
+.produto-thumb.no-image {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
 }
