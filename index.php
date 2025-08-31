@@ -107,8 +107,6 @@ if (!$result) {
         </div>
     </div>
 
-    <footer class="footer">
-        <p>&copy; <?php echo date('Y'); ?> Plushie Store - Sistema de Gerenciamento</p>
-    </footer>
+    <?php include'includes/footer.php';?>
 </body>
 </html>

@@ -54,5 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <button type="submit">Salvar</button>
     </form>
+    <?php include'../includes/footer.php';?>
 </body>
 </html>
