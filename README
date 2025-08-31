@@ -1,0 +1,8 @@
+## Banco de Dados
+O banco está no arquivo `database/plushie_store.sql`.
+
+### Como importar no phpMyAdmin:
+1. Crie um banco chamado `plushie_store`.
+2. Vá em Importar.
+3. Selecione o arquivo `database/plushie_store.sql`.
+4. Clique em Executar.
