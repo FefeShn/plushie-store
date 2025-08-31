@@ -8,7 +8,6 @@ if (!isLoggedIn()) {
     exit();
 }
 
-// Buscar produtos do banco de dados
 $query = "SELECT p.*, c.nome_categoria 
             FROM produtos p 
             LEFT JOIN categorias c ON p.categoria_id = c.id 
@@ -19,23 +18,14 @@ $result = $mysqli->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plushie Store - Sistema de Gerenciamento</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="assets/style.css">
-</head>
+<?php include'includes/header.php';?>
 <body>
     <?php include 'includes/navbar.php'; ?>
-
-
     <div class="container">
         <div class="page-title">
             <h2>Bem-vindo ao Sistema de Gerenciamento</h2>
             <p>Gerencie seus produtos e categorias de pelúcias</p>
         </div>
-
         <div class="dashboard-cards">
             <div class="dash-card">
                 <div class="dash-card-icon">
@@ -45,7 +35,6 @@ $result = $mysqli->query($query);
                 <p>Gerencie seu inventário de pelúcias</p>
                 <a href="produtos/index.php" class="btn btn-primary">Gerenciar Produtos</a>
             </div>
-            
             <div class="dash-card">
                 <div class="dash-card-icon">
                     <i class="fas fa-tags"></i>
@@ -55,7 +44,6 @@ $result = $mysqli->query($query);
                 <a href="categorias/index.php" class="btn btn-primary">Gerenciar Categorias</a>
             </div>
         </div>
-
         <div class="page-title">
             <h2>Nossas Pelúcias</h2>
             <p>Confira alguns produtos em destaque</p>
@@ -64,10 +52,10 @@ $result = $mysqli->query($query);
         <div class="plushie-grid">
             <?php $result = $mysqli->query($query);
 
-if (!$result) {
-    die("Erro na query: " . $mysqli->error);
-}
-?>
+        if (!$result) {
+            die("Erro na query: " . $mysqli->error);
+        }
+        ?>
             <?php if ($result->num_rows > 0): ?>
                 <?php while($produto = $result->fetch_assoc()): ?>
                     <div class="plushie-card">
@@ -90,7 +78,6 @@ if (!$result) {
                                 <span class="<?php echo $produto['disponibilidade'] == 'disponível' ? 'available' : 'unavailable'; ?>">
                                     <?php echo $produto['disponibilidade'] == 'disponível' ? 'Disponível' : 'Indisponível'; ?>
                                 </span>
-
                                 <a href="produtos/editar.php?id=<?php echo $produto['id']; ?>" class="btn btn-primary">Editar</a>
                             </div>
                         </div>
@@ -106,7 +93,6 @@ if (!$result) {
             <?php endif; ?>
         </div>
     </div>
-
     <?php include'includes/footer.php';?>
 </body>
 </html>

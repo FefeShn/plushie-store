@@ -53,11 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Editar Categoria - Plushie Store</title>
-    <link rel="stylesheet" href="../assets/style.css">
-</head>
+<?php include'../includes/header.php';?>
 <body>
     <?php include '../includes/navbar.php'; ?>
 

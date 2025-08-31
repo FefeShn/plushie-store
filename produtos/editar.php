@@ -57,40 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plushie Store - Editar Produto</title>
-    <link rel="stylesheet" href="../assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .form-group {
-            margin-bottom: 1rem;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: .3rem;
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: .5rem;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
-        .radio-group {
-            display: flex;
-            gap: 1rem;
-        }
-        .preview-img {
-            margin-top: .5rem;
-            max-height: 120px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            display: block;
-        }
-    </style>
-</head>
+
+<?php include'../includes/header.php';?>
 <body>
     <?php include '../includes/navbar.php'; ?>
 

@@ -933,3 +933,55 @@ form button:hover {
     border-radius: 6px;
     background: #f9f9f9;
 }
+
+.form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: .3rem;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: .5rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+        }
+        .preview-img {
+            margin-top: .5rem;
+            max-height: 120px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: .3rem;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: .5rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+        }
+        .preview-img {
+            margin-top: .5rem;
+            max-height: 120px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            display: none;
+        }
