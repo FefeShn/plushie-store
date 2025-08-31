@@ -24,7 +24,6 @@ body {
     line-height: 1.6;
 }
 
-/* ===== ESTILOS DE LOGIN ===== */
 .login-container {
     display: flex;
     justify-content: center;
@@ -281,14 +280,12 @@ body {
     right: 10%;
 }
 
-/* ===== LAYOUT PRINCIPAL ===== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Header */
 .header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: 1rem 2rem;
@@ -340,7 +337,6 @@ body {
     color: var(--white);
 }
 
-/* Header interno para páginas de admin */
 body > header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: 1.5rem 2rem;
@@ -374,7 +370,6 @@ body > header .header-content {
     margin: 0 auto;
 }
 
-/* Page Title */
 .page-title {
     text-align: center;
     margin-bottom: 2rem;
@@ -391,7 +386,6 @@ body > header .header-content {
     font-size: 1.1rem;
 }
 
-/* Conteúdo principal */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -404,9 +398,6 @@ main {
     padding: 0 1rem;
 }
 
-/* ===== COMPONENTES ===== */
-
-/* Dashboard Cards */
 .dashboard-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -444,7 +435,6 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* Plushie Grid */
 .plushie-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -545,7 +535,6 @@ main {
     font-weight: 600;
 }
 
-/* Tabelas de dados */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -586,7 +575,6 @@ table tr:hover {
     transition: all 0.2s ease;
 }
 
-/* Tabela responsiva */
 .table-responsive {
     overflow-x: auto;
     margin: 1.5rem 0;
@@ -610,7 +598,6 @@ table tr:hover {
     flex-wrap: wrap;
 }
 
-/* Mensagens de estado vazio */
 .empty-state {
     text-align: center;
     padding: 3rem;
@@ -647,7 +634,6 @@ table tr:hover {
     text-decoration: underline;
 }
 
-/* Formulários */
 .form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -695,7 +681,6 @@ table tr:hover {
     margin-top: 2rem;
 }
 
-/* Radio buttons para disponibilidade */
 .radio-group {
     display: flex;
     gap: 2rem;
@@ -720,7 +705,6 @@ table tr:hover {
     margin-top: 2rem;
 }
 
-/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
     .login-box {
         padding: 1.5rem;
@@ -839,7 +823,6 @@ table tr,
     transition: all 0.3s ease;
 }
 
-/* ===== Formulário de criar categoria ===== */
 form {
     max-width: 400px;
     margin: 30px auto;
@@ -935,8 +918,8 @@ form button:hover {
 }
 
 .form-group {
-            margin-bottom: 1rem;
-        }
+    margin-bottom: 1rem;
+}
         label {
             font-weight: bold;
             display: block;
@@ -960,28 +943,4 @@ form button:hover {
             display: block;
         }
 
-        .form-group {
-            margin-bottom: 1rem;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: .3rem;
-        }
-        input, textarea, select {
-            width: 100%;
-            padding: .5rem;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
-        .radio-group {
-            display: flex;
-            gap: 1rem;
-        }
-        .preview-img {
-            margin-top: .5rem;
-            max-height: 120px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            display: none;
-        }
+        

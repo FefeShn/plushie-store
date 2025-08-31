@@ -11,14 +11,12 @@ if (!isLoggedIn()) {
 $error = '';
 $success = '';
 
-// Pega o ID da categoria via GET
 $id = $_GET['id'] ?? null;
 if (!$id) {
     header('Location: index.php');
     exit();
 }
 
-// Busca a categoria atual
 $stmt = $mysqli->prepare("SELECT * FROM categorias WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -30,7 +28,6 @@ if (!$categoria) {
     exit();
 }
 
-// Processa o envio do formulário
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome_categoria = trim($_POST['nome_categoria'] ?? '');
 

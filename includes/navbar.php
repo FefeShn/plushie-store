@@ -1,11 +1,8 @@
 <?php
 // navbar.php
-// Verifica se a sessão já foi iniciada
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
-// Verifica se o usuário está logado
 $isLoggedIn = isset($_SESSION['user_id']);
 $username = $_SESSION['nome'] ?? 'Usuário';
 $currentPage = basename($_SERVER['PHP_SELF']);

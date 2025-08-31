@@ -11,7 +11,6 @@ if (!isLoggedIn()) {
 $error = '';
 $success = '';
 
-// Buscar categorias para o select
 $categorias = $mysqli->query("SELECT id, nome_categoria FROM categorias ORDER BY nome_categoria ASC");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

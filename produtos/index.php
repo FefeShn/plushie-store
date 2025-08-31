@@ -7,8 +7,6 @@ if (!isLoggedIn()) {
     header('Location: ../login.php');
     exit();
 }
-
-// Buscar produtos + categoria (JOIN)
 $query = "SELECT p.*, c.nome_categoria 
           FROM produtos p
           LEFT JOIN categorias c ON p.categoria_id = c.id
